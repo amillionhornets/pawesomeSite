@@ -34,7 +34,7 @@ a {
 
 section {
     font-size: 2rem;
-    width: 25%;
+    width: 30%;
     margin-bottom: 50px;
     padding: 10px;
 }
@@ -59,4 +59,5 @@ section {
     display: inline-flex;
     width: 100%;
     margin-bottom: 0;
+    /* color: rgb(162, 211, 226); */
 }
