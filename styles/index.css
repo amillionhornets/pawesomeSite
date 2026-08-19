@@ -1,0 +1,25 @@
+@font-face {
+    font-family: pawesomeFont;
+    src: url(../media/ByteBounce.ttf);
+}
+
+* {
+    font-family: pawesomeFont;
+}
+
+
+body {
+    background-color: rgb(22, 21, 21);
+    color: white;
+}
+
+nav {
+    justify-content: center;
+    display: inline-flex;
+    width: 100%;
+}
+
+nav > h1 {
+    padding-right: 25px;
+    text-decoration: underline;
+}
