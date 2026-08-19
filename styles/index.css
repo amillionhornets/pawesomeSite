@@ -17,6 +17,7 @@ nav {
     justify-content: center;
     display: inline-flex;
     width: 100%;
+    margin-top: 0;
 }
 
 nav > h1 {
@@ -25,11 +26,18 @@ nav > h1 {
     color: rgb(247, 247, 56);
 }
 
+a {
+    color: rgb(247, 247, 56);
+    
+}
+
 .selected {
     color: rgb(224, 41, 41);
 }
 
-a {
-    color: rgb(247, 247, 56);
-
+#title {
+    justify-content: center;
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 0;
 }
