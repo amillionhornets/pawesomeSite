@@ -3,17 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="./media/images/test.png">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/card.css">
 </head>
 <body>
+    <h1 id="title"><span class="butterfly">ʚïɞ</span> Swag Pawesome Website <span class="butterfly">ʚïɞ</span></h1>
     <nav>
         <h1><a href="index.html">Home</a></h1>
         <h1><a href="blog.html">Blog</a></h1>
         <h1><a class="selected" href="contact.html">[Contact]</a></h1>
     </nav>
     <main>
-
+        <!-- <span style="width: 5%; color: red;">x</span> -->
+        <form id="form">
+            <p>Send me a message!</p>
+            <input type="text" placeholder="Name" name="name" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <section class="sectionCard" style="margin-top: 5%; border-color: steelblue;">
+            <p>If you are a recuiter please include your LinkedIn or a job posting!</p>
+        </section>
+        <section class="sectionCard" style="float: right; width: 12%; color: red; border-color: orange; border-style: dotted;">
+            <p>x Don't be weird! x</p>
+        </section>
     </main>
 </body>
+<script>
+    const form = document.getElementById('form');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        formData.append("access_key", "02180f5d-535a-4e43-bff2-caf799cdfa4f");
+
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert("Success! Your message has been sent.");
+                form.reset();
+            } else {
+                alert("Error: " + data.message);
+            }
+
+        } catch (error) {
+            alert("Something went wrong. Please try again.");
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+</script>
 </html>
