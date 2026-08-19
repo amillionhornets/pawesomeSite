@@ -1,0 +1,40 @@
+
+
+h2 {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+form > input {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 42%;
+    margin-right: 50%;
+    font-size: 1.5rem;
+}
+
+form > textarea {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 42%;
+    margin-right: 50%;
+    font-size: 1.5rem;
+}
+form > button {
+    display: flex;
+    justify-content: center;
+    margin-left: 42%;
+    margin-right: 50%;
+    font-size: 1.5rem;
+}
+
+form > p {
+    display: flex;
+    justify-content: center;
+    margin-left: 42%;
+    margin-right: 50%;
+    font-size: 2rem;
+}
