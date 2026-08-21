@@ -23,13 +23,12 @@ nav {
 
 nav > h1 {
     padding-right: 25px;
-    text-decoration: underline;
     color: rgb(247, 247, 56);
 }
 
 a {
     color: rgb(247, 247, 56);
-    
+    text-decoration: none;
 }
 
 section {
@@ -38,7 +37,6 @@ section {
     margin-bottom: 50px;
     padding: 10px;
 }
-
 
 /* Classes */
 
