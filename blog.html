@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="icon" type="image/x-icon" href="./media/images/test.png">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/blog.css">
-    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/cursor.css">
 </head>
+
 <body>
-    <h1 id="title"><span class="butterfly">ʚïɞ</span> Swag Pawesome Website <span class="butterfly">ʚïɞ</span></h1>
-    <nav>
-        <h1><a href="index.html">Home</a></h1>
-        <h1><a class="selected" href="blog.html">[Blog]</a></h1>
-        <h1><a href="resume.html">Resume</a></h1>
-        <h1><a href="contact.html">Contact</a></h1>
-    </nav>
-    <main>
-        <h1 id="blogTitle"># I be blogging</h1>
-        <section class="blog">
-            <p class="blogHeader">Blog #3 - 2026/08/21</p>
-            <p class="blogContent">Treymarcus is my favorite husband of Karskin. Tibbles mentioned!</p>
-            <img src="media/pb/yuri.gif">
+    <main class="page-wrap">
+        <header class="site-header">
+            <h1>ʚïɞ Swag Pawesome Website ʚïɞ</h1>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a class="active" href="blog.html">[Blog]</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="inner-page">
+            <p class="eyebrow">* blog stuff and whatnot *</p>
+            <h2># I be blogging</h2>
+            <p class="intro">Stuff I want to put on my blog</p>
+
+            <div class="post-list">
+                <article class="post">
+                    <div class="post-meta">2026/08/21 · <span>#friends</span></div>
+                    <h3>Blog #3</h3>
+                    
+                    <!-- Image spot -->
+                    <img class="blog-img" src="https://www.amillionhornets.lol/media/pb/yuri.gif" alt="A little website" style="max-width: 75%;">
+                    
+                    <p>Treymarcus is my favorite husband of Karskin. Tibbles mentioned!</p>
+                    <a href="./contact.html">reply to this thought</a>
+                </article>
+
+                <article class="post">
+                    <div class="post-meta">2026/08/20 · <span>#media</span></div>
+                    <h3>Blog #2</h3>
+                    
+                    <!-- Image spot -->
+                    <img class="blog-img" src="https://www.amillionhornets.lol/media/pb/13512887_d924b.gif" alt="Things I liked" style="max-width: 100%;">
+                    
+                    <p>I want to add a bunch of silly things to this site.</p>
+                    <a href="./contact.html">reply to this thought</a>
+                </article>
+
+                <article class="post">
+                    <div class="post-meta">2026/08/19 · <span>#blogging</span></div>
+                    <h3>Blog #1</h3>
+                    
+                    <!-- Image spot -->
+                    <img class="blog-img" src="https://www.amillionhornets.lol/media/pb/11880510_d5f76.gif" alt="Blog 1" style="max-width: 75%; ">
+                    
+                    <p>This is a really awesome blog!
+                        (p.s. I am using YYYY/MM/DD format)
+                    </p>
+                    <a href="./contact.html">reply to this thought</a>
+                </article>
+            </div>
         </section>
-        <section class="blog">
-            <p class="blogHeader">Blog #2 - 2026/08/20</p>
-            <p class="blogContent">I want to add a bunch of silly things to this site.</p>
-            <img src="media/pb/13512887_d924b.gif">
-        </section>
-        <section class="blog">
-            <p class="blogHeader">Blog #1 - 2026/08/19</p>
-            <p class="blogContent">This is a really awesome blog! <p style="font-size: medium;">(p.s. I am using YYYY/MM/DD format)</p></p>
-            <img src="media/pb/11880510_d5f76.gif">
-        </section>
+
+        <footer><span>ʚïɞ</span> <a href="index.html">back home</a> <span>ʚïɞ</span></footer>
     </main>
 </body>
+
 </html>
