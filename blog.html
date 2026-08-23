@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="icon" type="image/x-icon" href="./media/images/test.png">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/blog.css">
-    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/cursor.css">
 </head>
+
 <body>
-    <h1 id="title"><span class="butterfly">ʚïɞ</span> Swag Pawesome Website <span class="butterfly">ʚïɞ</span></h1>
-    <nav>
-        <h1><a href="index.html">Home</a></h1>
-        <h1><a class="selected" href="blog.html">[Blog]</a></h1>
-        <h1><a href="resume.html">Resume</a></h1>
-        <h1><a href="contact.html">Contact</a></h1>
-    </nav>
-    <main>
-        <h1 id="blogTitle"># I be blogging</h1>
-        <section class="blog">
-            <p class="blogHeader">Blog #3 - 2026/08/21</p>
-            <p class="blogContent">Treymarcus is my favorite husband of Karskin. Tibbles mentioned!</p>
-            <img src="media/pb/yuri.gif">
+    <main class="page-wrap">
+        <header class="site-header">
+            <h1>ʚïɞ Swag Pawesome Website ʚïɞ</h1>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a class="active" href="blog.html">[Blog]</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="inner-page">
+            <p class="eyebrow">* little internet journal *</p>
+            <h2>my thoughts & such</h2>
+            <p class="intro">Occasional notes about media, making things, and whatever else gets stuck in my head.</p>
+
+            <div class="post-list">
+                <article class="post">
+                    <div class="post-meta">08.18.26 · <span>#web</span></div>
+                    <h3>on making a little website</h3>
+                    <p>I wanted a corner of the internet that felt like mine, so I made one. It is still mostly held
+                        together by curiosity and tiny pictures.</p>
+                    <a href="./contact.html">reply to this
+                        thought</a>
+                </article>
+
+                <article class="post">
+                    <div class="post-meta">07.29.26 · <span>#media</span></div>
+                    <h3>a few things i liked lately</h3>
+                    <p>Mitski, rereading old philosophy notes, and websites that look like someone actually made them
+                        instead of a committee.</p>
+                    <a href="./contact.html">reply to
+                        this thought</a>
+                </article>
+
+                <article class="post">
+                    <div class="post-meta">06.11.26 · <span>#life</span></div>
+                    <h3>hello from the other side</h3>
+                    <p>Some thoughts are better when they are written down without a content strategy. This is one of
+                        those places.</p>
+                    <a href="./contact.html">reply to this
+                        thought</a>
+                </article>
+            </div>
         </section>
-        <section class="blog">
-            <p class="blogHeader">Blog #2 - 2026/08/20</p>
-            <p class="blogContent">I want to add a bunch of silly things to this site.</p>
-            <img src="media/pb/13512887_d924b.gif">
-        </section>
-        <section class="blog">
-            <p class="blogHeader">Blog #1 - 2026/08/19</p>
-            <p class="blogContent">This is a really awesome blog! <p style="font-size: medium;">(p.s. I am using YYYY/MM/DD format)</p></p>
-            <img src="media/pb/11880510_d5f76.gif">
-        </section>
+
+        <footer><span>ʚïɞ</span> <a href="index.html">back home</a> <span>ʚïɞ</span></footer>
     </main>
 </body>
+
 </html>

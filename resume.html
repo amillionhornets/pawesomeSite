@@ -1,71 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Resume</title>
     <link rel="icon" type="image/x-icon" href="./media/images/test.png">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/card.css">
-    <link rel="stylesheet" href="styles/resume.css">
-    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/cursor.css">
 </head>
 
 <body>
-    <h1 id="title"><span class="butterfly">ʚïɞ</span> Swag Pawesome Website <span class="butterfly">ʚïɞ</span></h1>
-    <nav>
-        <h1><a href="index.html">Home</a></h1>
-        <h1><a href="blog.html">Blog</a></h1>
-        <h1><a class="selected" href="resume.html">[Resume]</a></h1>
-        <h1><a href="contact.html">Contact</a></h1>
-    </nav>
-    <main>
-        <h1 class="sectionHeader">Education:</h1>
-        <ul>
-            <li>
-                <span>B.S. in Computer Science | Aug 2023 - May 2027</span>
-                <ul>
-                    <li>Coursework: Advanced Web Programming, Data Structures and Algorithms, Logic and AI, Network Security, Cloud Computing with Azure, Operating Systems, Software Engineering</li>
-                </ul>
-            </li>
-            <li>
-                <span>Minor in Philosophy | Aug 2025 - May 2027</span>
-                <ul>
-                    <li>Coursework: Knowledge And Reality, Symbolic Logic, Honors Seminar in Ethics & Literature, BusinessEthics & Leadership</li>
-                </ul>
-            </li>
-        </ul>
-        <h1 class="sectionHeader">Experience:</h1>
-        <ul>
-            <li>
-                <span>Software Developer | Feb 2025 - Present</span>
-                <ul>
-                    <li>Built tools to perform data analytics on Bitcoin mining operations by integrating RESTful APIs.</li>
-                    <li>Developed a full-stack Flask application to streamline technician workflows, visualize mining data, and manage repair records.</li>
-                    <li>Built and deployed Docker containers to trigger real-time alerts for critical mining emergencies, improving technician response time.</li>
-                    <li>Created self hosted AI for technicians to use on site.</li>
-                </ul>
-            </li>
-            <li>
-                <span>Electronics Associate | Jun 2023 - Jan 2025</span>
-                <ul>
-                    <li>Delivered excellent customer service and technical support for electronics, including product troubleshooting and setup.</li>
-                    <li>Kept Electronics Department clean and orderly.</li>
-                </ul>
-            </li>
-        </ul>
-        <h1 class="sectionHeader">Skills:</h1>
-        <ul>
-            <li>
-                <span>Languages: Python, SQL, Java, C#, JavaScript, TypeScript, PHP, HTML, CSS, Tailwind CSS</span>
-            </li>
-            <li>
-                <span>Frameworks & Libraries: Flask, React, Node.js, Pandas, SQLAlchemy</span>
-            </li>
-            <li>
-                <span>Technologies: MicroSoft SQL Server, VS Code, Linux</span>
-            </li>
-        </ul>
+    <main class="page-wrap">
+        <header class="site-header">
+            <h1>ʚïɞ Swag Pawesome Website ʚïɞ</h1>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a class="active" href="resume.html">[Resume]</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="inner-page resume-page">
+            <div class="resume-top">
+                <div>
+                    <p class="eyebrow">* a professional document, sort of *</p>
+                    <h2>resume</h2>
+                </div>
+                <button class="text-button" onclick="window.print()">[ print this ]</button>
+            </div>
+
+            <p class="intro">A brief list of things I have done, learned, and made.</p>
+
+            <div class="resume-section">
+                <h3>* experience *</h3>
+
+                <div class="resume-row" style="margin-bottom: 24px;">
+                    <div>
+                        <strong>Software Developer</strong>
+                        <p class="muted">Feb 2025 - Present</p>
+                    </div>
+                    <p>Built tools to perform data analytics on Bitcoin mining operations by integrating RESTful APIs.
+                        Developed a full-stack Flask application to streamline technician workflows, visualize mining
+                        data, and manage repair records. Built and deployed Docker containers to trigger real-time
+                        alerts for critical mining emergencies, improving technician response time. Created self-hosted
+                        AI for technicians to use on site.</p>
+                </div>
+
+                <div class="resume-row">
+                    <div>
+                        <strong>Electronics Associate</strong>
+                        <p class="muted">Jun 2023 - Jan 2025</p>
+                    </div>
+                    <p>Delivered excellent customer service and technical support for electronics, including product
+                        troubleshooting and setup. Kept Electronics Department clean and orderly.</p>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3>* education *</h3>
+
+                <div class="resume-row" style="margin-bottom: 24px;">
+                    <div>
+                        <strong>B.S. in Computer Science</strong>
+                        <p class="muted">Oklahoma City University<br>Aug 2023 - May 2027</p>
+                    </div>
+                    <p>Coursework: Advanced Web Programming, Data Structures and Algorithms, Logic and AI, Network
+                        Security, Cloud Computing with Azure, Operating Systems, Software Engineering.</p>
+                </div>
+
+                <div class="resume-row">
+                    <div>
+                        <strong>Minor in Philosophy</strong>
+                        <p class="muted">Aug 2025 - May 2027</p>
+                    </div>
+                    <p>Coursework: Knowledge And Reality, Symbolic Logic, Honors Seminar in Ethics & Literature,
+                        Business Ethics & Leadership.</p>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3>* things i know *</h3>
+                <p class="skill-line">
+                    <span>languages:</span> Python, SQL, Java, C#, C++, JavaScript, TypeScript, PHP, HTML, CSS, Tailwind
+                    CSS<br />
+                    <span>frameworks & libraries:</span> Flask, React, Node.js, Pandas, SQLAlchemy<br />
+                    <span>technologies:</span> MicroSoft SQL Server, VS Code, Linux
+                </p>
+            </div>
+        </section>
+
+        <footer><span>ʚïɞ</span> <a href="index.html">back home</a> <span>ʚïɞ</span></footer>
     </main>
 </body>
+
 </html>
