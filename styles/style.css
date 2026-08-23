@@ -265,6 +265,12 @@ footer a {
   margin: 0 0 12px;
 }
 
+.blog-img {
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px dashed var(--pinkie);
+}
+
 .resume-section {
   border-top: 1px dashed var(--pinkie);
   padding: 22px 0;
