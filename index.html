@@ -1,44 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="./media/images/test.png">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/card.css">
-    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/cursor.css">
 </head>
+
 <body>
-    <h1 id="title"><span class="butterfly">ʚïɞ</span> Swag Pawesome Website <span class="butterfly">ʚïɞ</span></h1>
-    <nav>
-        <h1><a class="selected" href="index.html">[Home]</a></h1>
-        <h1><a href="blog.html">Blog</a></h1>
-        <h1><a href="resume.html">Resume</a></h1>
-        <h1><a href="contact.html">Contact</a></h1>
-    </nav>
-    <main>
-        <img src="./media/pb/princess-bubblegum.gif" style="float: right; margin-right: 16%;" alt="happy princess bubblegum">
-        <section style="border-color: rgb(213, 115, 233); margin-top: 0%;" class="sectionCard">
-            <p>Welcome to my website !!!</p>
-            <p>Here you can find my ramblings on different media and much more probably.</p>
+    <main class="page-wrap">
+        <header class="site-header">
+            <h1>ʚïɞ Swag Pawesome Website ʚïɞ</h1>
+            <nav aria-label="Main navigation">
+                <a class="active" href="index.html">[Home]</a>
+                <a href="blog.html">Blog</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="welcome" id="home">
+            <img src="https://www.amillionhornets.lol/media/pb/princess-bubblegum.gif" alt="happy princess bubblegum" />
+            <div>
+                <p>Welcome to my website !!!</p>
+                <p>Here you can find my ramblings on different media and much more probably.</p>
+                <p class="tiny-note">last updated: whenever I remember</p>
+            </div>
         </section>
-        <section style="border-color: rgb(233, 178, 115); margin-top: 2%; float: right; margin-right: 5%; margin-top: 0;" class="sectionCard">
-            <p>* PB *</p>
-            <p>I love Princess Bubblegum so you might sea her on the site a couple of times.</p>
+
+        <section class="content-grid">
+            <div class="content-block princess-note">
+                <p class="star-title">* PB *</p>
+                <p>I love Princess Bubblegum so you might sea her on the site a couple of
+                    times.</p>
+                <img src="https://www.amillionhornets.lol/media/pb/adventure-time-princess-bubblegum.gif"
+                    alt="happy princess bubblegum" />
+            </div>
+
+            <div class="content-block" id="resume">
+                <p class="star-title">* Who am I *</p>
+                <p>Thats a really personal question to ask a stranger :O</p>
+                <p>Currently I am a student pursuing a degree in Computer Science and a Minor in Philosophy.</p>
+                <p>I am working as a software developer at ▮▮▮!</p>
+                <p class="links"><a href="contact.html">say hi</a> · <a href="blog.html">read my thoughts</a></p>
+            </div>
+
+            <div class="content-block stuff" id="blog">
+                <p class="star-title">* Stuff *</p>
+                <div class="stuff-switcher">
+                    <button id="prev-btn" aria-label="Previous item">&lt;</button>
+                    <div>
+                        <strong id="carousel-title">Bury Me at Makeout Creek</strong>
+                        <span id="carousel-detail">Current album · Mitski</span>
+                    </div>
+                    <button id="next-btn" aria-label="Next item">&gt;</button>
+                </div>
+            </div>
         </section>
-        <section style="float: right; border-color: rgb(48, 167, 236); margin-top: 5%;" class="sectionCard">
-            * Who am I *
-            <p>Thats a really personal question to ask a stranger :O</p>
-            <p>Currently I am a student pursuing a degree in Computer Science and a Minor in Philosophy.</p>
-            <p>I am working as a software developer at ▮▮▮!</p>
-        </section>
-        <section style="border-color: rgb(136, 248, 136); margin-right: 5%; margin-left: 5%;" class="sectionCard">
-            <p>* Stuff *</p>
-            <p>Current Album - Bury Me at Makeout Creek by Mitski</p>
-            <p>Current Project - This website</p>
-        </section>
-        <img src="./media/pb/adventure-time-princess-bubblegum.gif" style="margin-left: 7%; position: absolute;" alt="happy princess bubblegum">
+
+        <footer id="contact"><span>ʚïɞ</span> thanks for visiting · <a href="./contact.html">email
+                me</a> <span>ʚïɞ</span></footer>
     </main>
+
+    <script>
+        const entries = [
+            { title: 'Bury Me at Makeout Creek', detail: 'Current album · Mitski' },
+            { title: 'This website', detail: 'Current project · always in progress' },
+            { title: 'Umm philosophy book or whatever', detail: 'Sisyphus keep going my goat!' }
+        ];
+        let currentEntry = 0;
+
+        const titleEl = document.getElementById('carousel-title');
+        const detailEl = document.getElementById('carousel-detail');
+
+        function updateCarousel() {
+            titleEl.textContent = entries[currentEntry].title;
+            detailEl.textContent = entries[currentEntry].detail;
+        }
+
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            currentEntry = (currentEntry + entries.length - 1) % entries.length;
+            updateCarousel();
+        });
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            currentEntry = (currentEntry + 1) % entries.length;
+            updateCarousel();
+        });
+    </script>
 </body>
+
 </html>
