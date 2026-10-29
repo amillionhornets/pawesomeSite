@@ -1,6 +1,6 @@
 @font-face {
     font-family: pawesomeFont;
-    src: url(../media/ByteBounce.ttf);
+    src: url(/fonts/ByteBounce.ttf);
 }
 
 * {
