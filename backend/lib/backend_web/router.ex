@@ -18,13 +18,12 @@ defmodule BackendWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-  end
-
-  scope "/blog", BackendWeb do
-    pipe_through :browser
-
     get "/blog", PageController, :blog
-  end
+    get "/contact", PageController, :contact
+    get "/resume", PageController, :resume
+    get "/admin", PageController, :admin
+end
+
 
   # Other scopes may use custom stacks.
   # scope "/api", BackendWeb do
