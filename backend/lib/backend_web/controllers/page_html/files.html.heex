@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/card.css">
     <link rel="stylesheet" href="/css/cursor.css">
+    <link rel="stylesheet" href="/css/files.css">
 </head>
 <body>
     <nav>
@@ -22,13 +23,13 @@
     <main>
        <p>Its time to transfer some files</p>
         <section>
-            <label>Enter Room Name: <input id="roomName" type="text"></label>
+            <label>Enter Room Name: <input autocomplete="off" id="roomName" type="text"></label>
             <button id="joinButton">Join</button>
             <div id="joinStatus"></div>
             
         </section>
         <section id="room">
-            <label>Enter Message <input id="roomMessage" type="text"></label>
+            <label>Enter Message <input autocomplete="off" id="roomMessage" type="text"></label>
             <button id="sendMessage">Send</button>
             <section id="messages">
 
