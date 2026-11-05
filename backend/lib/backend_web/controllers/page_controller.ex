@@ -20,4 +20,8 @@ defmodule BackendWeb.PageController do
   def admin(conn, _params) do
     render(conn, :admin)
   end
+
+  def files(conn, _params) do
+    render(conn, :files)
+  end
 end

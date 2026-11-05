@@ -22,6 +22,7 @@ defmodule BackendWeb.Router do
     get "/contact", PageController, :contact
     get "/resume", PageController, :resume
     get "/admin", PageController, :admin
+    get "/files", PageController, :files
 end
 
 
