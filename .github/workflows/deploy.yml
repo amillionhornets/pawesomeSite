@@ -1,0 +1,43 @@
+# Deploys the Phoenix app in backend/ to the Ubuntu VM on every push to main.
+# The release is built on the VM itself (it's aarch64), then the systemd
+# service "pawesome" is restarted. Caddy on the VM terminates HTTPS.
+name: Deploy to VM
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-vm
+  cancel-in-progress: false
+
+env:
+  VM_HOST: 147.224.152.91
+  VM_USER: ubuntu
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VM_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          echo "147.224.152.91 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEQAG5cEPFxxmHQ7dBrzeLWApvyqPlQBdZ2Tt57ijTDO" >> ~/.ssh/known_hosts
+
+      - name: Upload source
+        run: |
+          rsync -az --delete \
+            --exclude _build --exclude deps --exclude node_modules \
+            --exclude priv/static/assets --exclude priv/static/cache_manifest.json \
+            backend/ "$VM_USER@$VM_HOST:/opt/pawesome/src/"
+
+      - name: Build release and restart
+        run: |
+          scp .github/scripts/remote-deploy.sh "$VM_USER@$VM_HOST:/opt/pawesome/remote-deploy.sh"
+          ssh "$VM_USER@$VM_HOST" 'bash /opt/pawesome/remote-deploy.sh </dev/null'
